@@ -7,6 +7,9 @@ build:
         - name: jiralert
           path: cmd/jiralert 
     flags: -a -tags netgo
+    ldflags: -w
+    extldflags:
+       - -static
 crossbuild:
     platforms:
         - linux/amd64
